@@ -84,7 +84,7 @@ tenant:
   # pool metrics to be read by Prometheus
   metrics:
     enabled: false
-    port: 9000
+    port: 443
     protocol: http
   certificate:
     ## Use this field to provide one or more external CA certificates. This is used by MinIO
