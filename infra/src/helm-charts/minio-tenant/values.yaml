@@ -31,15 +31,15 @@ tenant:
     ## Servers specifies the number of MinIO Tenant Pods / Servers in this pool.
     ## For standalone mode, supply 1. For distributed mode, supply 4 or more.
     ## Note that the operator does not support upgrading from standalone to distributed mode.
-    - servers: 1
+    - servers: 2
       ## custom name for the pool
       name: pool-datalake-0
       ## volumesPerServer specifies the number of volumes attached per MinIO Tenant Pod / Server.
-      volumesPerServer: 1
+      volumesPerServer: 2
       ## size specifies the capacity per volume
-      size: 20Gi
+      size: 10Gi
       ## storageClass specifies the storage class name to be used for this pool
-      storageClassName: default
+      storageClassName: standalone
       ## Used to specify annotations for pods
       annotations: { }
       ## Used to specify labels for pods
@@ -84,7 +84,7 @@ tenant:
   # pool metrics to be read by Prometheus
   metrics:
     enabled: false
-    port: 443
+    port: 9000
     protocol: http
   certificate:
     ## Use this field to provide one or more external CA certificates. This is used by MinIO
