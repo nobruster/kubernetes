@@ -31,11 +31,11 @@ tenant:
     ## Servers specifies the number of MinIO Tenant Pods / Servers in this pool.
     ## For standalone mode, supply 1. For distributed mode, supply 4 or more.
     ## Note that the operator does not support upgrading from standalone to distributed mode.
-    - servers: 2
+    - servers: 1
       ## custom name for the pool
       name: pool-datalake-0
       ## volumesPerServer specifies the number of volumes attached per MinIO Tenant Pod / Server.
-      volumesPerServer: 2
+      volumesPerServer: 1
       ## size specifies the capacity per volume
       size: 20Gi
       ## storageClass specifies the storage class name to be used for this pool
